@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.trabajopracticodos;
 
-/**
- *
- * @author ezequ
- */
 public final class Auto extends Vehiculo {
 
     public Auto(String marca, String patente, Combustible c) {
@@ -16,8 +7,8 @@ public final class Auto extends Vehiculo {
     }
 
     @Override
-    public double calcularCostoDeCombustible() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public double calcularCostoDeCombustible(double distancia) {
+        return (distancia *7)/100;
     }
-    
+
 }

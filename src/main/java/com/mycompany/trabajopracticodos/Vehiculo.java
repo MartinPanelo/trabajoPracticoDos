@@ -39,7 +39,7 @@ public abstract class Vehiculo {
         this.combustible = combustible;
     }
     
-    public abstract double calcularCostoDeCombustible();
+    public abstract double calcularCostoDeCombustible(double distancia);
     
     
 }
