@@ -9,6 +9,15 @@ package com.mycompany.trabajopracticodos;
  *
  * @author ezequ
  */
-public class Camioneta {
+public final class Camioneta extends Vehiculo {
+
+    public Camioneta(String marca, String patente, Combustible c) {
+        super(marca, patente, c);
+    }
+
+    @Override
+    public double calcularCostoDeCombustible() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
