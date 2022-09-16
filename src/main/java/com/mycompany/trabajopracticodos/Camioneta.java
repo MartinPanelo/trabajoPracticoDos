@@ -2,13 +2,13 @@ package com.mycompany.trabajopracticodos;
 
 public final class Camioneta extends Vehiculo {
 
-    public Camioneta(String marca, String patente, Combustible c) {
-        super(marca, patente, c);
+    public Camioneta(String marca, String patente, Combustible combustible) {
+        super(marca, patente, combustible);
     }
 
     @Override
-    public double calcularCostoDeCombustible(double distancia) {
-        return (distancia *10)/100;
+    public double calcularCostoDeCombustible() {
+        return 10/100;
     }
 
 }

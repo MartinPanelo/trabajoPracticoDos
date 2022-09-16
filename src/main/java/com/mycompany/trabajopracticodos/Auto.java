@@ -2,13 +2,13 @@ package com.mycompany.trabajopracticodos;
 
 public final class Auto extends Vehiculo {
 
-    public Auto(String marca, String patente, Combustible c) {
-        super(marca, patente, c);
+    public Auto(String marca, String patente, Combustible combustible) {
+        super(marca, patente, combustible);
     }
 
     @Override
-    public double calcularCostoDeCombustible(double distancia) {
-        return (distancia *7)/100;
+    public double calcularCostoDeCombustible() {
+        return 7/100;
     }
 
 }
