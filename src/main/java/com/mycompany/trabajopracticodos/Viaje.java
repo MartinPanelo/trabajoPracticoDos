@@ -71,7 +71,7 @@ public class Viaje {
         System.out.println("La distancia entre estas dos ciudades es de :" + distanciaEntreCiudades + "KM");
     }
 
-    public double calcularCostoPeajes() {
+    public double calcularCostoPeajes() {// ES DIFERIDO DEPENDIENDO EL VEHICULO VER CON INSTANCEOF
          double costoPeajes = this.cantidadPeajes * origen.getCostoPeaje();
         System.out.println("El costo total del peaje es de :" + costoPeajes + "");
         return costoPeajes;

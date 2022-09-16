@@ -9,5 +9,10 @@ public class TrabajoPracticoDos {
         Ciudad Cordoba = new Ciudad("Cordoba", 7, 600);
         Viaje viajesin = new Viaje(SanLuis, Cordoba, auto, 5);
         
+        viajesin.calcularDistancia();
+        viajesin.calcularCostoPeajes();
+        System.out.println( viajesin.calcularCostoTotalCombustible());
+       
+        
     }
 }
