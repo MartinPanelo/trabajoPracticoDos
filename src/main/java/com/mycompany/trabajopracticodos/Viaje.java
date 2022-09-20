@@ -67,26 +67,52 @@ public class Viaje {
     }
 
     public void calcularDistancia() {
-        double distanciaEntreCiudades = Math.abs(destino.getKm() - origen.getKm());
+        double distanciaEntreCiudades;
+        if(origen.getRuta() == destino.getRuta()){
+           
+              distanciaEntreCiudades = Math.abs(destino.getKm() - origen.getKm());
         System.out.println("La distancia entre estas dos ciudades es de :" + distanciaEntreCiudades + "KM");
+            
+        }else{
+            
+             System.out.println("La distancia entre estas dos ciudades es de :" + distancia + "KM");
+            
+        }
+        
+        
+       
     }
 
+
     public double calcularCostoPeajes() {// ES DIFERIDO DEPENDIENDO EL VEHICULO VER CON INSTANCEOF
-         double costoPeajes = this.cantidadPeajes * origen.getCostoPeaje();
-        System.out.println("El costo total del peaje es de :" + costoPeajes + "");
-        return costoPeajes;
+        
+        
+      
+             return  this.cantidadPeajes * vehiculo.getCostoPeaje();
+           
+      
+        
+        
+      
     }
 
     public double calcularCostoTotalCombustible() {
 
-        System.out.println("El costo total del combustible es de :" + vehiculo.calcularCostoDeCombustible() * Math.abs(destino.getKm() - origen.getKm()) * vehiculo.getCombustible().getPrecioCombustible() + "$");
-        return vehiculo.calcularCostoDeCombustible() * Math.abs(destino.getKm() - origen.getKm()) * vehiculo.getCombustible().getPrecioCombustible();
+      //  System.out.println("El costo total del combustible es de :" + 
+      //         Math.abs(destino.getKm() -origen.getKm())* vehiculo.getCombustible().getPrecioCombustible() + "$");
+        return Math.abs(destino.getKm() - origen.getKm()) * vehiculo.getCombustible().getPrecioCombustible();
     }
     
     public void calcularCostoTotal(){
-        System.out.println("El costo total es de :" + (calcularCostoTotalCombustible() + calcularCostoPeajes()));
+        
+       
+        System.out.println("El costo total del viaje es : " + (calcularCostoTotalCombustible() + calcularCostoPeajes()) + "$");
         
         
+        
+        
+        
+       
     }
 
 }

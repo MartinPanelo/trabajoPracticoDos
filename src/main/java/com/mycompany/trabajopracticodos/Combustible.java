@@ -25,6 +25,8 @@ public class Combustible {
     public void setPrecioCombustible(double precioCombustible) {
         this.precioCombustible = precioCombustible;
     }
+    
+   
    
    
 }

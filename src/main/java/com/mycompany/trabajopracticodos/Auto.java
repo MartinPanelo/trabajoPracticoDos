@@ -2,8 +2,8 @@ package com.mycompany.trabajopracticodos;
 
 public final class Auto extends Vehiculo {
 
-    public Auto(String marca, String patente, Combustible combustible) {
-        super(marca, patente, combustible);
+    public Auto(String marca, String patente, Combustible combustible, float costoPeaje) {
+        super(marca, patente, combustible,costoPeaje);
     }
 
     @Override

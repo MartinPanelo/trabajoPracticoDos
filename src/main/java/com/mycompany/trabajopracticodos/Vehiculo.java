@@ -5,14 +5,18 @@ public abstract class Vehiculo {
     private String marca;
     private String patente;
     private Combustible combustible;
-
+    private float costoPeaje;
+    
     public Vehiculo() {
     }
 
-    public Vehiculo(String marca, String patente, Combustible combustible) {
+   
+
+    public Vehiculo(String marca, String patente, Combustible combustible, float costoPeaje) {
         this.marca = marca;
         this.patente = patente;
         this.combustible = combustible;
+        this.costoPeaje = costoPeaje;
     }
 
     public String getMarca() {
@@ -37,6 +41,14 @@ public abstract class Vehiculo {
 
     public void setCombustible(Combustible combustible) {
         this.combustible = combustible;
+    }
+    
+     public float getCostoPeaje() {
+        return costoPeaje;
+    }
+
+    public void setCostoPeaje(float costoPeaje) {
+        this.costoPeaje = costoPeaje;
     }
     
     public abstract double calcularCostoDeCombustible();

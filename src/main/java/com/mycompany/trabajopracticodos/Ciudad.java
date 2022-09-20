@@ -5,13 +5,13 @@ public class Ciudad {
     private String nombre;
     private int ruta;
     private double km;
-    private double costoPeaje; 
+   
 
     public Ciudad(String nombre, int ruta, double km) {
         this.nombre = nombre;
         this.ruta = ruta;
         this.km = km;
-        this.costoPeaje = 150.0;
+        
     }
 
     public Ciudad() {
@@ -41,13 +41,7 @@ public class Ciudad {
         this.km = km;
     }
 
-    public double getCostoPeaje() {
-        return costoPeaje;
-    }
-
-    public void setCostoPeaje(double costoPeaje) {
-        this.costoPeaje = costoPeaje;
-    }
+   
 
     
     
