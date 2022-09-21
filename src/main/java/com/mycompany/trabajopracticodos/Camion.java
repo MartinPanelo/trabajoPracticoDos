@@ -8,7 +8,7 @@ public final class Camion extends Vehiculo {
 
     @Override
     public double calcularCostoDeCombustible(Combustible combustible) {
-        return 12/100*combustible.getPrecioCombustible(); 
+        return 12/100*super.getCombustible().getPrecioCombustible();
     }
 
 }
