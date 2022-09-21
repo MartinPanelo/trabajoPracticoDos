@@ -51,7 +51,7 @@ public abstract class Vehiculo {
         this.costoPeaje = costoPeaje;
     }
     
-    public abstract double calcularCostoDeCombustible();
+    public abstract double calcularCostoDeCombustible(Combustible combustible);
     
     
 }

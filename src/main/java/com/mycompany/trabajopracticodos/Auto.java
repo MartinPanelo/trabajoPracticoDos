@@ -7,8 +7,8 @@ public final class Auto extends Vehiculo {
     }
 
     @Override
-    public double calcularCostoDeCombustible() {
-        return 7/100;
+    public double calcularCostoDeCombustible(Combustible combustible) {
+        return 7/100*combustible.getPrecioCombustible();
     }
 
 }

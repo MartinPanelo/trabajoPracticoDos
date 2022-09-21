@@ -7,6 +7,7 @@ public class Viaje {
     private double distancia;
     private Vehiculo vehiculo;
     private int cantidadPeajes;
+    private Combustible combustible;
 
     public Viaje() {
     }
@@ -66,7 +67,15 @@ public class Viaje {
         this.cantidadPeajes = cantidadPeajes;
     }
 
-    public void calcularDistancia() {
+    public Combustible getCombustible() {
+        return combustible;
+    }
+
+    public void setCombustible(Combustible combustible) {
+        this.combustible = combustible;
+    }
+
+    public double calcularDistancia() {
         double distanciaEntreCiudades;
         if(origen.getRuta() == destino.getRuta()){
            
@@ -76,9 +85,9 @@ public class Viaje {
         }else{
             
              System.out.println("La distancia entre estas dos ciudades es de :" + distancia + "KM");
-            
+            distanciaEntreCiudades=distancia;
         }
-        
+        return distanciaEntreCiudades;
         
        
     }
@@ -100,7 +109,7 @@ public class Viaje {
 
       //  System.out.println("El costo total del combustible es de :" + 
       //         Math.abs(destino.getKm() -origen.getKm())* vehiculo.getCombustible().getPrecioCombustible() + "$");
-        return Math.abs(destino.getKm() - origen.getKm()) * vehiculo.getCombustible().getPrecioCombustible();
+        return calcularDistancia() * vehiculo.calcularCostoDeCombustible(combustible);
     }
     
     public void calcularCostoTotal(){
