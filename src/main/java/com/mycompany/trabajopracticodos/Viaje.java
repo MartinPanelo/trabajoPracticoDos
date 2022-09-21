@@ -115,7 +115,7 @@ public class Viaje {
     public void calcularCostoTotal(){
         
        
-        System.out.println("El costo total del viaje es : " + calcularCostoTotalCombustible() + calcularCostoPeajes() + "$");
+        System.out.println("El costo total del viaje es : " + (calcularCostoTotalCombustible() + calcularCostoPeajes()) + "$");
         
         
         
