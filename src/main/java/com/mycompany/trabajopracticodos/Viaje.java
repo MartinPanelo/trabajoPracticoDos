@@ -109,13 +109,13 @@ public class Viaje {
 
       //  System.out.println("El costo total del combustible es de :" + 
       //         Math.abs(destino.getKm() -origen.getKm())* vehiculo.getCombustible().getPrecioCombustible() + "$");
-        return calcularDistancia() * vehiculo.calcularCostoDeCombustible(combustible);
+        return vehiculo.calcularCostoDeCombustible()*calcularDistancia();
     }
     
     public void calcularCostoTotal(){
         
        
-        System.out.println("El costo total del viaje es : " + (calcularCostoTotalCombustible() + calcularCostoPeajes()) + "$");
+        System.out.println("El costo total del viaje es : " + calcularCostoTotalCombustible() + calcularCostoPeajes() + "$");
         
         
         
